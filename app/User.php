@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class user extends Model
 {
-    public function mobile()
+    public function roles()
     {
-    	return $this->hasMany('App\mobile');
+    	return $this->belongsToMany('App\role');
     }
 }

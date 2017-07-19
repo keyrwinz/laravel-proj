@@ -46,7 +46,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 20px;
             }
 
             .links > a {
@@ -78,11 +78,11 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md" style="color:black">
                     @section('body')
-                        @show
+                     @show
                 </div>
-
+                <!--
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -90,6 +90,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                -->
             </div>
         </div>
     </body>

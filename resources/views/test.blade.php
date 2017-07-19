@@ -3,8 +3,7 @@
 @section('title', '1-1-rel')
 
 @section('body')
-    Numbers of {{ $user->name }}: <br>
-    @foreach($mobiles as $mobile)
-		{{ $mobile->number }} <br>
-    @endforeach
+	@foreach($users as $user)
+		{{ $user }} <br>
+	@endforeach
 @endsection
