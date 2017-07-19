@@ -13,8 +13,8 @@ class HomeController extends Controller
 
 	public function test()
 	{
-		$user = user::find(1);
-		$usernum = user::find(1)->passport;
-		return view('test', compact('user'), compact('usernum'));
+		$user = user::find(3);
+		$mobiles = user::find(3)->mobile;
+		return view('test', compact('mobiles'), compact('user'));
 	}
 }

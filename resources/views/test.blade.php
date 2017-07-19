@@ -3,6 +3,8 @@
 @section('title', '1-1-rel')
 
 @section('body')
-    Welcome {{ $user->name }} <br>
-    Your passport #: {{ $usernum->number }}
+    Numbers of {{ $user->name }}: <br>
+    @foreach($mobiles as $mobile)
+		{{ $mobile->number }} <br>
+    @endforeach
 @endsection
