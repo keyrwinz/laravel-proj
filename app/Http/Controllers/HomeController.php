@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\user;
-use App\role;
+use App\country;
 
 class HomeController extends Controller
 {
@@ -14,8 +13,7 @@ class HomeController extends Controller
 
 	public function test()
 	{
-		//$users = user::find(1)->roles;
-		$users = role::find(3)->users;
-		return view('test', compact('users'));
+		$posts = country::find(2)->posts;
+		return $posts;
 	}
 }

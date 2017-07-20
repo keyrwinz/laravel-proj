@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', '1-1-rel')
+@section('title', 'Laravel-proj')
 
 @section('body')
 	@foreach($users as $user)
