@@ -14,8 +14,8 @@ class HomeController extends Controller
 
 	public function test()
 	{
-		$post = post::find(1);
-		$video = video::find(1);
-		return view('test', compact('post'), compact('video'));
+		$post = post::find(1)->tags;
+		$video = video::find(1)->tags;
+		return view('test',compact('post'), compact('video'));
 	}
 }

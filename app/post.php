@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class post extends Model
 {
-    public function comments()
+    public function tags()
     {
-    	return $this->morphMany('App\comment', 'commentable');
+    	return $this->morphToMany('App\tag', 'taggable');
     }
 }
