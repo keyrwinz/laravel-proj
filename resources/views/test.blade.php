@@ -3,7 +3,6 @@
 @section('title', 'Laravel-proj')
 
 @section('body')
-	@foreach($users as $user)
-		{{ $user }} <br>
-	@endforeach
+	{{ $post->comments }}
+	{{ $video->comments}}
 @endsection

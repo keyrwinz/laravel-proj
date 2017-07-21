@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\country;
+use App\post;
+use App\video;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,8 @@ class HomeController extends Controller
 
 	public function test()
 	{
-		$posts = country::find(2)->posts;
-		return $posts;
+		$post = post::find(1);
+		$video = video::find(1);
+		return view('test', compact('post'), compact('video'));
 	}
 }
