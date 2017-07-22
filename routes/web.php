@@ -12,5 +12,5 @@
 */
 
 
-Route::get('/', 'HomeController@home');
-Route::get('/test', 'HomeController@test');
+Route::resource('todo', 'todocontroller');
+
