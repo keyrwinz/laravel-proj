@@ -9,11 +9,15 @@
 		{{ csrf_field() }}
 		  <fieldset>
 		    <div class="form-group">
-		      <div class="col-lg-10">
-		        <textarea class="form-control" name="body" rows="5" id="textArea"></textarea>
-		        <br>
-		        <button type="submit" class="btn btn-success">Submit</button>
-		      </div>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" name="title" placeholder="Title">
+					<br>
+				</div>
+				<div class="col-lg-10">
+					<textarea class="form-control" name="body" rows="5" id="textArea" placeholder="Body"></textarea>
+					<br>
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
 		    </div>
 		    @if ($errors->any())
 		    	<div class="alert alert-danger">

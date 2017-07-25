@@ -38,8 +38,10 @@ class todocontroller extends Controller
     {
         $todo = new todo;
         $this->validate($request, [
-            'body' => 'required|unique:todos'
+            'title' => 'required|unique:todos',
+            'body' => 'required'
             ]);
+        $todo->title = $request->title;
         $todo->body = $request->body;
         $todo->save();
         return redirect('todo');
@@ -53,7 +55,8 @@ class todocontroller extends Controller
      */
     public function show($id)
     {
-        //
+        $item = todo::find($id);
+        return view('todo.show', compact('item'));
     }
 
     /**
