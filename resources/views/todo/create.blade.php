@@ -5,7 +5,7 @@
 	<a href="/todo" class="btn btn-info">Back</a>
 	<div class="col-lg-4 col-lg-offset-4">
 		<h1>{{ucfirst(substr(route::currentRouteName(),5))}} item</h1>
-		<form class="form-horizontal" action="/todo/@yield('editId')" name=""method="post"">
+		<form class="form-horizontal" action="/todo/@yield('editId')" method="post"">
 		{{ csrf_field() }}
 		@section('editMethod')
 			@show
@@ -22,7 +22,7 @@
 					<button type="submit" class="btn btn-success">Submit</button>
 				</div>
 		    </div>
-			@include('todo.partials.errors')
+			@include('todo.partials.errors');
 		  </fieldset>
 		</form>
 	</div>
