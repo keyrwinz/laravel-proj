@@ -3,5 +3,5 @@
 @section('title', 'Home')
 
 @section('body')
-    Laravel
+	<h1 style="text-align: center">LARAVEL</h1>
 @endsection
