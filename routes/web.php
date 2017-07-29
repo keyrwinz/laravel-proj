@@ -12,8 +12,8 @@
 */
 
 
-Route::resource('todo', 'todocontroller');
 Route::get('/', function(){
 	return view('welcome');
-})->middleware('test');
+});
 
+Route::get('send', 'mailController@send');
