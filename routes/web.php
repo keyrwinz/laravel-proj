@@ -17,3 +17,5 @@ Route::get('/', function(){
 });
 
 Route::get('send', 'mailController@send');
+//Route::get('email', 'mailController@email');
+	

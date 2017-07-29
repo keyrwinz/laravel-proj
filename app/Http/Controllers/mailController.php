@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Mail;
+use App\mail\sendMail;
+use App\user;
 
 class mailController extends Controller
 {
     public function send()
     {
-    	Mail::send(['text'=>'mail'], ['name', 'kevin'], function($message){
-    		$message->to('keyrwinfelisilda@gmail.com', 'to keyrwin')->subject('Test Email');
-    		$message->from('keyrwinfelisilda@gmail.com', 'keyrwin');
-    	});
+    	Mail::send(new SendMail());
+    }
+
+    public function email()
+    {
+    	return view('email');
     }
 }
