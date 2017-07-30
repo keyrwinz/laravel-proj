@@ -11,7 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call(emailSeeder::class);
+        $this->call(testSeeder::class);
         // DB::table('users')->insert([
         // 	'name' => 'kenkenn',
         // 	'email' => 'kenkennz@yahoo.com',
@@ -21,6 +22,6 @@ class DatabaseSeeder extends Seeder
         // 	'email' => str_random(10).'@yahoo.com',
         // 	'password' => bcrypt('secret'),
         // ]);
-        factory(App\User::class, 40)->create();
+        
     }
 }
