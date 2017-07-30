@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/', function(){
+	return view('welcome');
 });
+
+Route::get('send', 'mailController@send');
+//Route::get('email', 'mailController@email');
+	
