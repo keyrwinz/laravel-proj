@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Mail;
-use App\mail\sendMail;
+use App\mail\newMail;
 use App\user;
 
 class mailController extends Controller
 {
     public function send()
     {
-    	Mail::send(new SendMail());
+    	Mail::send(new newMail());
     }
 
     public function email()

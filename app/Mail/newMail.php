@@ -6,10 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Http\Request;
-use App\user;
 
-class SendMail extends Mailable
+class newMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -29,8 +27,7 @@ class SendMail extends Mailable
      * @return $this
      */
     public function build()
-    { 
-        $user = user::find(1);
-        return $this->view('mail',['name'=>$user->name])->to($user->email);
+    {
+        return $this->markdown('email')->to('keyrwinfelisilda@gmail.com');
     }
 }
