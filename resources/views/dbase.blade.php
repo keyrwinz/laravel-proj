@@ -7,15 +7,16 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>user id</th>
+					<th>email id</th>
 					<th>name</th>
 				</tr>
 			</thead>
 			<tbody>
 				@foreach($users as $user)
 					<tr>
-						<td>{{ $user->user_id }}</td>
+						<td>{{ $user->email_id }}</td>
 						<td>{{ $user->name }}</td>
+						{{-- <td>{{ $user->test['name'] }}</td> --}}
 					</tr>
 				@endforeach
 			</tbody>

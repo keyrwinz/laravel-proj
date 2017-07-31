@@ -11,6 +11,6 @@ class testSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\test::class, 10)->create();
+        factory(App\test::class, 5)->create();
     }
 }
