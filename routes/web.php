@@ -16,5 +16,6 @@ Route::get('/', function(){
 	return view('welcome');
 });
 
-Route::get('dbase', 'dbaseController@dbase');
+Route::get('form', 'formController@index')->name('form');
+Route::post('form', 'formController@store');
 	
