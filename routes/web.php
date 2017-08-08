@@ -11,11 +11,14 @@
 |
 */
 
-
-Route::get('/', function(){
-	return view('welcome');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('form', 'formController@index')->name('form');
-Route::post('form', 'formController@store');
-	
+Route::get('/test', function(){
+	return view('test');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
